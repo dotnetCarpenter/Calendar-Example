@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>1Kalender</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="http://www.1calendar.dk/favicon.ico" />
+		<style type="text/css">
+			@import url(css/calendar.css);
+			@font-face {
+				font-family: 'SuiGenerisFreeRegular';
+				src: url('fonts/sui_generis_free.eot');
+				src: local('Sui Generis Free Regular'), local('SuiGenerisFree'), url('fonts/sui_generis_free.ttf') format('truetype');
+			}
+		</style>
+		<script type="text/javascript" src="lib/jquery/jquery-1.4.js"></script>
+		<script type="text/javascript" src="lib/jquery/jquery-jqote.js"></script>
+	</head>
+	<body>
+		<h1>Hej</h1>
+		<div id="cal">
+			<script type="text/html" id="template">
+			<![CDATA[
+			    '<div id="cal-head">{caption}',
+					'<div id="cal-caption">',
+						'<span id="cap-left">{capLeft}</span>',
+						'<span id="cap-middle">{capMiddle}</span>',
+						'<span id="cap-right">{capRight}</span>',
+					'</div>',
+					'<tpl name="months">',
+						'<div class="cal-months" id="{monthId}" style="left: {leftPercentage}%; width:{styleWidth}%;">{monthName}</div>',
+					'</tpl>',
+				'</div>',
+				'<div id="cal-body" style="{style}">',
+					'<tpl name="day">',
+						'<div class="dayContainer{classNames}" id="{dayId}" style="left:{styleLeft}%; top:{styleTop}%; width:{styleWidth}%;">',
+							'<span class="dayName">{dayName}</span><span class="dayNumber">{dayNumber}</span><span class="dayEvent" id="{eventId}" style="{eventStyle}">{event}</span>',
+							'<sup>{holiday}</sup>',
+						'</div>',
+					'</tpl>',
+					'<tpl name="hruleDay">',
+						'<div id="{id}" class="hrule" style="top: {styleTop}%;"></div>',
+					'</tpl>',
+					'<tpl name="vruleMonth">',
+						'<div id="{id}" class="vrule" style="{style}"/></div>',
+					'</tpl>',
+					'<tpl name="noRecords">',
+						'<div id="{id}" class="x-calendar-norecords">',
+							'<h1 class="x-calendar-norecords-text">{noRecordsText}</h1>',
+						'</div>',
+					'</tpl>',
+				'</div>'
+			]]>
+			</script>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				
+			});
+		</script>
+	</body>
+</html>

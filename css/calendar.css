@@ -1,0 +1,131 @@
+/* Default font and reset
+ * =default
+ */
+html, body *{
+	border:0;
+	font-family: 'SuiGenerisFreeRegular';
+	height:100%;
+	margin:0;
+	padding:0;
+}
+#cal-head
+{
+	top: 0%;
+	text-align:center;
+	height: 60px;
+	font-weight:800;
+	color:#fff;
+	background: #BBD4F6 url(../images/header.gif) repeat-x;
+}
+div.cal-months{
+	float:left;
+	/*position:absolute;*/
+	padding-top: 20px;
+	height: 20px;
+	color:#083772;
+}
+div#cal-caption #cap-left
+{
+	/*float:left;*/
+	position:absolute;
+	width: 33%;
+	left: 0%;
+	text-align:left;
+	padding: 0 0 0 0.8em;
+}
+div#cal-caption #cap-middle
+{
+	/*float:left;*/
+	position:absolute;
+	left: 33.3333%;
+	width: 33%;
+	text-align:center;
+}
+div#cal-caption #cap-right
+{
+	position:absolute;
+	width: 33%;
+	left: 65%;
+	text-align: right;
+}
+#cal-body{
+	position:relative;
+	width:100%;
+	font-family: serif;
+}
+#cal-body .dayContainer
+{
+	position:absolute;
+	display:inline-block;
+	font-size:16px;
+	height:20px;
+	overflow: hidden;
+}
+#cal-body .x-calendar-contract .dayEvent { cursor: pointer; }
+#cal-body .dayNumber, #cal-body .dayName {
+	text-align: left;
+	float:left;
+	z-index: 10;
+}
+#cal-body .dayEvent {
+	text-align: left;
+	float:left;
+	z-index: 10;
+}
+#cal-body .dayName {
+	margin: 0;
+	padding-left: 2px;
+	text-align:center;
+	width: 13px;
+}
+#cal-body span.dayNumber {
+	margin: 0;
+	padding-right: 2px;
+	text-align:right;
+	width: 18px;
+}
+#cal-body .dayContainer sup {
+	float:right;
+	font-size: 7pt;
+	z-index: 100;
+	font-family: Verdana;
+/*	position: absolute;
+	text-align: right;
+	width: 100%;
+*/
+}
+#cal-body .hiddenInfo{
+	display:none;
+}
+
+div.hrule {
+	left:0pt;
+	position:absolute;
+	width:100%;
+	border-top:1px solid #ccc;
+}
+div.vrule {
+	position:absolute;
+	top:0pt;
+	height: 100%;
+	border-left:1px solid #ccc;
+	width: 1px;
+}
+
+.x-calendar-saturday, .x-calendar-holiday { background-color: #eeeeee; }
+.x-calendar-sunday { background-color: #dededf; }
+/*
+.x-calendar-saturday { background-color: #ffface; }
+.x-calendar-sunday { background-color: #fbef8c; }
+
+.x-calendar-saturday { background-color: #d0e6fb; }
+.x-calendar-sunday { background-color: #b3d9ff; }
+*/
+.x-calendar-norecords{
+	display:table-cell;
+	position:absolute;
+	text-align:center;
+	top:50%;
+	vertical-align:middle;
+	width:100%;
+}
