@@ -5,56 +5,163 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<link rel="shortcut icon" href="http://www.1calendar.dk/favicon.ico" />
 		<style type="text/css">
+			@import url(css/reset.css);
 			@import url(css/calendar.css);
 			@font-face {
-				font-family: 'SuiGenerisFreeRegular';
-				src: url('fonts/sui_generis_free.eot');
-				src: local('Sui Generis Free Regular'), local('SuiGenerisFree'), url('fonts/sui_generis_free.ttf') format('truetype');
+				font-family: 'DustismoRegular';
+				src: url('fonts/dustismo_bold.eot');
+				src: local('Dustismo Regular'), local('Dustismo-Bold'), url('fonts/dustismo_bold.ttf') format('truetype');
 			}
 		</style>
-		<script type="text/javascript" src="lib/jquery/jquery-1.4.js"></script>
-		<script type="text/javascript" src="lib/jquery/jquery-jqote.js"></script>
+		<script type="text/javascript" src="lib/jquery/jquery-1.4.min.js"></script>
+		<script type="text/javascript" src="lib/jquery/jquery-jqote.min.js"></script>
 	</head>
 	<body>
-		<h1>Hej</h1>
-		<div id="cal">
+		<div id="cal" class="x-calendar-container" style="height:660px;">
+			<!-- test html -->
+			<div id="cal-head">Kalender Eksempel
+				<div id="cal-caption">
+					<span id="cap-left">made by Jon Ege Ronnenberg</span>
+					<span id="cap-middle">blah</span>
+					<span id="cap-right">10-04-2010</span>
+				</div>
+				<div class="cal-months" id="m1" style="left:0; width:16,6666%;">Jan</div>
+				<div class="cal-months" id="m2" style="left:16.6666%; width:16,6666%;">Feb</div>
+				<div class="cal-months" id="m3" style="left:33.3333%; width:16,6666%;">Mar</div>
+				<div class="cal-months" id="m4" style="left:50%; width:16,6666%;">Apr</div>
+				<div class="cal-months" id="m5" style="left:66.6666%; width:16,6666%;">Maj</div>
+				<div class="cal-months" id="m6" style="left:83.3333%; width:16,6666%;">Jun</div>
+			</div>
+			<div id="cal-body">
+				<!-- noget af april -->
+				<div class="dayContainer  x-calendar-holiday" style="left:50%; top:12.9032%; width:16.6666%;">
+					<span class="dayName">ma</span>
+					<span class="dayNumber">5</span>
+					<sup>2. påskedag</sup>
+				</div>
+				<div class="dayContainer" style="left:50%; top:16.1290%; width:16.6666%;">
+					<span class="dayName">ti</span>
+					<span class="dayNumber">6</span>
+				</div>
+				<div class="dayContainer" style="left:50%; top:19.3548%; width:16.6666%;">
+					<span class="dayName">on</span>
+					<span class="dayNumber">7</span>
+				</div>
+				<div class="dayContainer" style="left:50%; top:22.5806%; width:16.6666%;">
+					<span class="dayName">to</span>
+					<span class="dayNumber">8</span>
+				</div>
+				<div class="dayContainer" style="left:50%; top:25.8065%; width:16.6666%;">
+					<span class="dayName">fr</span>
+					<span class="dayNumber">9</span>
+				</div>
+				<div class="dayContainer x-calendar-saturday dayEvent" style="left:50%; top:29.0323%; width:16.6666%;">
+					<span class="dayName">lø</span>
+					<span class="dayNumber">10</span>
+					<span class="dayEvent">Min fødselsdag</span>
+				</div>
+				<!-- noget af april -->
+				<!-- noget af januar -->
+				<div class="dayContainer x-calendar-holiday" style="50%; top:0; width:16.6666%;">
+					<span class="dayName">fr</span>
+					<span class="dayNumber">1</span>
+					<sup>nytårsdag</sup>
+				</div>
+				<div class="dayContainer x-calendar-saturday" style="50%;  top:3.2258%; width:16.6666%;">
+					<span class="dayName">lø</span>
+					<span class="dayNumber">2</span>
+				</div>
+				<div class="dayContainer x-calendar-sunday" style="50%; top:6.4516%; width:16.6666%;">
+					<span class="dayName">sø</span>
+					<span class="dayNumber">3</span>
+				</div>
+				<div class="dayContainer" style="50%; top:9.6774%; width:16.6666%;">
+					<span class="dayName">ma</span>
+					<span class="dayNumber">4</span>
+				</div>
+				<!-- noget af januar -->
+				<div class="vrule" style="left: 16.6666%;"/></div>
+				<div class="vrule" style="left: 33.3333%;"/></div>
+				<div class="vrule" style="left: 50%;"/></div>
+				<div class="vrule" style="left: 66.6666%;"/></div>
+				<div class="vrule" style="left: 83.3333%;"/></div>
+				<div class="hrule" style="top: 0;"></div>
+				<div class="hrule" style="top: 3.2258%;"></div>
+				<div class="hrule" style="top: 6.4516%;"></div>
+				<div class="hrule" style="top: 9.6774%;"></div>				
+				<div class="hrule" style="top: 12.9032%;"></div>
+				<div class="hrule" style="top: 16.1290%;"></div>
+				<div class="hrule" style="top: 19.3548%;"></div>
+				<div class="hrule" style="top: 22.5806%;"></div>
+				<div class="hrule" style="top: 25.8065%;"></div>
+				<div class="hrule" style="top: 29.0323%;"></div>
+				<div class="hrule" style="top: 32.2581%;"></div>
+				<div class="hrule" style="top: 35.4839%;"></div>
+				<div class="hrule" style="top: 38.7097%;"></div>
+				<div class="hrule" style="top: 41.9355%;"></div>
+				<div class="hrule" style="top: 45.1613%;"></div>
+				<div class="hrule" style="top: 48.3871%;"></div>
+				<div class="hrule" style="top: 51.6129%;"></div>
+				<div class="hrule" style="top: 54.8387%;"></div>
+				<div class="hrule" style="top: 58.0645%;"></div>
+				<div class="hrule" style="top: 61.2903%;"></div>
+				<div class="hrule" style="top: 64.5161%;"></div>
+				<div class="hrule" style="top: 67.7419%;"></div>
+				<div class="hrule" style="top: 70.9677%;"></div>
+				<div class="hrule" style="top: 74.1935%;"></div>
+				<div class="hrule" style="top: 77.4194%;"></div>
+				<div class="hrule" style="top: 80.6452%;"></div>
+				<div class="hrule" style="top: 83.8710%;"></div>
+				<div class="hrule" style="top: 87.0968%;"></div>
+				<div class="hrule" style="top: 90.3226%;"></div>
+				<div class="hrule" style="top: 93.5484%;"></div>
+				<div class="hrule" style="top: 96.7742%;"></div>
+				<div class="hrule" style="top: 100%;"></div>
+			</div>
+			<!-- test html -->
 			<script type="text/html" id="template">
 			<![CDATA[
-			    '<div id="cal-head">{caption}',
-					'<div id="cal-caption">',
-						'<span id="cap-left">{capLeft}</span>',
-						'<span id="cap-middle">{capMiddle}</span>',
-						'<span id="cap-right">{capRight}</span>',
-					'</div>',
-					'<tpl name="months">',
-						'<div class="cal-months" id="{monthId}" style="left: {leftPercentage}%; width:{styleWidth}%;">{monthName}</div>',
-					'</tpl>',
-				'</div>',
-				'<div id="cal-body" style="{style}">',
-					'<tpl name="day">',
-						'<div class="dayContainer{classNames}" id="{dayId}" style="left:{styleLeft}%; top:{styleTop}%; width:{styleWidth}%;">',
-							'<span class="dayName">{dayName}</span><span class="dayNumber">{dayNumber}</span><span class="dayEvent" id="{eventId}" style="{eventStyle}">{event}</span>',
-							'<sup>{holiday}</sup>',
-						'</div>',
-					'</tpl>',
-					'<tpl name="hruleDay">',
-						'<div id="{id}" class="hrule" style="top: {styleTop}%;"></div>',
-					'</tpl>',
-					'<tpl name="vruleMonth">',
-						'<div id="{id}" class="vrule" style="{style}"/></div>',
-					'</tpl>',
-					'<tpl name="noRecords">',
-						'<div id="{id}" class="x-calendar-norecords">',
-							'<h1 class="x-calendar-norecords-text">{noRecordsText}</h1>',
-						'</div>',
-					'</tpl>',
-				'</div>'
+			    <div id="cal-head"><%= this.caption %>
+					<div id="cal-caption">
+						<span id="cap-left"><%= this.capLeft %></span>
+						<span id="cap-middle"><%= this.capMiddle %></span>
+						<span id="cap-right"><%= this.capRight %></span>
+					</div>
+					<% for (month in this.months){ %>
+						<div class="cal-months" id="<%= this.months[month].id %>" style="left:<%= this.leftPercentage %>%; width:<%= this.styleWidth %>%;"><%= this.months[month].name %></div>
+					<% } %>
+				</div>
 			]]>
 			</script>
 		</div>
 		<script type="text/javascript">
+			var calData = {
+				caption: "1Kalender Eksempel",
+				capLeft: "",
+				capMiddle: "",
+				capRight: "",
+				leftPercentage: "",
+				styleWidth: "",
+				months: [
+					{ id: "", name: "" },
+					{ id: "", name: "" },
+					{ id: "", name: "" },
+					{ id: "", name: "" },
+					{ id: "", name: "" },
+					{ id: "", name: "" },
+					{ id: "", name: "" },
+					{ id: "", name: "" },
+					{ id: "", name: "" },
+					{ id: "", name: "" },
+					{ id: "", name: "" },
+					{ id: "", name: "" },
+					{ id: "", name: "" },
+					{ id: "", name: "" }
+				]				
+			};
+
 			$(function(){
-				
+			//	$('#cal-body') $(document).height();
 			});
 		</script>
 	</body>
