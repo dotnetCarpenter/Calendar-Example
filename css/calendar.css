@@ -8,8 +8,8 @@ html, body *{
 	margin:0;
 	padding:0;
 }
-#cal{ position: relative; min-width:800px; }
-#cal-head
+.x-calendar-container{ position: relative; min-width:800px; }
+.x-calendar-head
 {
 	background: #BBD4F6 url(../images/header.gif) repeat-x;
 	color:#fff;
@@ -19,14 +19,14 @@ html, body *{
 	text-align:center;	
 	top: 0;	
 }
-div.cal-months{
+.x-calendar-months{
 	float:left;
 	position:absolute;
 	padding-top: 20px;
 	height: 20px;
 	color:#083772;
 }
-div#cal-caption #cap-left
+.x-calendar-caption .x-calendar-left
 {
 	float:left;
 	position:absolute;
@@ -35,7 +35,7 @@ div#cal-caption #cap-left
 	text-align:left;
 	padding: 0 0 0 0.8em;
 }
-div#cal-caption #cap-middle
+.x-calendar-caption .x-calendar-middle
 {
 	/*float:left;*/
 	position:absolute;
@@ -43,20 +43,20 @@ div#cal-caption #cap-middle
 	width: 33%;
 	text-align:center;
 }
-div#cal-caption #cap-right
+.x-calendar-caption .x-calendar-right
 {
 	position:absolute;
 	width: 33%;
 	left: 65%;
 	text-align: right;
 }
-#cal-body{
+.x-calendar-body{
 	position:relative;
 	width:100%;
 	font-family: serif;
 	height:600px;
 }
-#cal-body .dayContainer
+.x-calendar-body .dayContainer
 {
 	position:absolute;
 	display:inline-block;
@@ -64,33 +64,31 @@ div#cal-caption #cap-right
 	height:20px;
 	overflow: hidden;
 }
-#cal-body .dayEvent { cursor: pointer; }
-#cal-body .dayNumber, #cal-body .dayName {
+.x-calendar-body .dayEvent { cursor: pointer; }
+.x-calendar-body .dayNumber, .x-calendar-body .dayName {
 	text-align: left;
 	float:left;
 	font-size: 13px;
 	padding-top: 3px;
 	z-index: 10;
 }
-#cal-body .dayEvent {
+.x-calendar-body .dayEvent {
 	text-align: left;
 	float:left;
 }
-#cal-body .dayName {
-	text-align:left;
-	
-	margin: 0;
-	
+.x-calendar-body .dayName {
+	text-align:left;	
+	margin: 0;	
 	padding-left: 2px;	
 	width: 13px;
 }
-#cal-body span.dayNumber {
+.x-calendar-body span.dayNumber {
 	text-align: center;
 	margin: 0;
 	padding-right: 2px;
 	width: 18px;
 }
-#cal-body .dayContainer sup {
+.x-calendar-body .dayContainer sup {
 	float:right;
 	font-size: 8pt;
 	z-index: 100;
@@ -100,7 +98,7 @@ div#cal-caption #cap-right
 	width: 100%;
 */
 }
-#cal-body .hiddenInfo{
+.x-calendar-body .hiddenInfo{
 	display:none;
 }
 
@@ -127,11 +125,3 @@ div.vrule {
 .x-calendar-saturday { background-color: #d0e6fb; }
 .x-calendar-sunday { background-color: #b3d9ff; }
 */
-.x-calendar-norecords{
-	display:table-cell;
-	position:absolute;
-	text-align:center;
-	top:50%;
-	vertical-align:middle;
-	width:100%;
-}
