@@ -15,6 +15,8 @@
 		</style>
 		<script type="text/javascript" src="lib/jquery/jquery-1.4.min.js"></script>
 		<script type="text/javascript" src="lib/jquery/jquery-jqote.min.js"></script>
+		<script type="text/javascript" src="lib/datejs.js"></script>
+		<script type="text/javascript" src="lib/date-da-DK.js"></script>
 	</head>
 	<body>
 		<div id="cal"></div>
@@ -31,15 +33,16 @@
 				<% } %>
 			</div>
 			<div class="x-calendar-body">
-				<div class="dayContainer x-calendar-saturday dayEvent" style="left:50%; top:29.0323%; width:<%= 100/this.months.length %>%;">
-					<span class="dayName">lø</span>
-					<span class="dayNumber">10</span>
-					<span class="dayEvent">Min fødselsdag</span>
-					<sup>nytårsdag</sup>
-				</div>
-				
+				<% var currentDate = this.startDate; %>
 				<% for (var i = 0; i < this.months.length; i++){ %>
 					<div class="vrule" style="left:<%= 100/this.months.length*i %>%;"></div>
+					<% for(var d = 0; d < daysInMonth(this.startDate.getMonth(),this.startDate.getFullYear()); d++){ %>
+						<%= console.log(daysInMonth(this.startDate.getMonth(),this.startDate.getFullYear())) %>
+						<div class="dayContainer" style="left:<%= 100/this.months.length*i %>%; top:<%= 100/31*d %>%; width:<%= 100/this.months.length %>%;">
+							<span class="dayName">lø</span>
+							<span class="dayNumber">10</span>
+						</div>
+					<% } %>
 				<% } %>
 				<% for (var i = 0; i <= 31; i++){ %>
 					<div class="hrule" style="top:<%= 100/31*i %>%;"></div>
@@ -48,20 +51,26 @@
 		]]>
 		</script>
 		<script type="text/javascript">
-			dateToString = function(date) {
-			    var month = (date.getMonth() + 1).toString();
-			    var dom = date.getDate().toString();
-			    if (month.length == 1) month = "0" + month;
-			    if (dom.length == 1) dom = "0" + dom;
-			    return dom + "-" + month + "-" + date.getFullYear();
-			  }
+			function dateToString(date) {
+				var month = (date.getMonth() + 1).toString();
+				var dom = date.getDate().toString();
+				if (month.length == 1) month = "0" + month;
+				if (dom.length == 1) dom = "0" + dom;
+				return dom + "-" + month + "-" + date.getFullYear();
+			}
+			function daysInMonth(month, year)
+			{
+				return 32 - new Date(year, month, 32).getDate();
+			}
 
 			var calData = {
+				monthsToShow: 6,
+				startDate: new Date(2010, 0, 1),
 				text: {
 					caption: "Kalender Eksempel",
 					capLeft: "made by Jon Ege Ronnenberg",
 					capMiddle: null,
-					capRight: dateToString(new Date(Date.now()))
+					capRight: dateToString(new Date())
 				},
 				months: [
 					{ name: "Jan" },
@@ -76,7 +85,10 @@
 					{ name: "Okt" },
 					{ name: "Nov" },
 					{ name: "Dec" }*/
-				]				
+				],
+				events: [
+					{ id: '', date: '', text: '' }
+				]
 			};
 
 			$(function(){
